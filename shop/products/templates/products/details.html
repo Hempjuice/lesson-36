@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Страница товара
+{% endblock %}
+
+{% block body %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+            <li class="breadcrumb-item"><a href="/products/">Каталог товаров</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{  product.name }}</li>
+        </ol>
+    </nav>
+    <h1>{{ object.name }}</h1>
+    <p>Цена: {{ object.price }} руб.</p>
+    <hr>
+    <a class="btn btn-primary" href="/products/">Вернуться в каталог товаров</a>
+{% endblock %}
